@@ -11,5 +11,5 @@ int main() {
 	SetConsoleTextAttribute(hConsole, 0x05);
 	cout << (length * width) * height;
 	SetConsoleTextAttribute(hConsole, 0x0F);
-	cout << " cub.m" << endl;
+	cout << " cub.cm" << endl;
 }
