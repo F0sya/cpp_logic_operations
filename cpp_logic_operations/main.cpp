@@ -1,15 +1,10 @@
 #include <iostream>
 #include <Windows.h>
-#define _USE_MATH_DEFINES
-#include <math.h>
 using namespace std;
 
 int main() {
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	float radius; cout << "Radius of sphere(cm):";  SetConsoleTextAttribute(hConsole, 0x05); cin >> radius; SetConsoleTextAttribute(hConsole, 0x0F);
-	cout << "Volume of sphere: ";
+	int days; cout << "Amount of days:";  SetConsoleTextAttribute(hConsole, 0x05); cin >> days; SetConsoleTextAttribute(hConsole, 0x0F);
 	SetConsoleTextAttribute(hConsole, 0x05);
-	cout << (4 * M_PI * (radius*radius*radius)) / 3;
-	SetConsoleTextAttribute(hConsole, 0x0F);
-	cout << " cub.cm" << endl;
+	cout << (days - (days % 7)) / 7; SetConsoleTextAttribute(hConsole, 0x0F); cout << " weeks "; SetConsoleTextAttribute(hConsole, 0x05); cout << days % 7;  SetConsoleTextAttribute(hConsole, 0x0F); cout << " days" << endl;
 }
